@@ -1,0 +1,5 @@
+Tenemos dos colecciones "users" y "quizzes".
+Las dos colecciones son las que utiliza el programa de servidor que gestiona los quizzes https://github.com/ebarra/quiz-2015-mongoose o https://github.com/jquemada/quiz-2015
+- Queremos hacer un programa de linea de comandos que dado un email de usuario (es el campo con el que se registran los usuarios)
+imprima su fecha de creación y sus cuestionarios, solo las preguntas.
+> node index.js user@vishub.org
