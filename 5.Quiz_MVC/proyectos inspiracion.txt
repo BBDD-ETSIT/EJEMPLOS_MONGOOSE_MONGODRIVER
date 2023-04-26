@@ -1,0 +1,9 @@
+Proyectos en los que me he inspirado:
+
+https://github.com/CORE-UPM/MiniProject-5-Autores-Autorizacion-2023
+
+https://github.com/madhums/node-express-mongoose-demo
+
+
+http://webapplog.com/express-js-and-mongoose-example-building-hackhall/
+https://github.com/azat-co/hackhall

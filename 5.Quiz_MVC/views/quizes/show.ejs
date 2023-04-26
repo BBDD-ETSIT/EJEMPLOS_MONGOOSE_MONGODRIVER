@@ -1,0 +1,22 @@
+<%if (quiz.image){%>
+<p><img class="quiz_img" src="/media/<%= quiz.image %>"></p>
+<%}%>
+<form method="get" action="/quizes/<%= quiz.id %>/answer">        
+  <%= quiz.pregunta %> <p>
+  <input type="text" name="respuesta" value="Respuesta"/>
+  <input type="submit" value="Enviar">
+</form>
+
+<%if(session.user) { %>
+	<p><a href="/quizes/<%= quiz.id %>/comments/new"><button>Nuevo comentario</button></a></p>
+<%}%>
+
+<p><strong>Comentarios:</strong></p>
+<%for(var i=0; i<quiz.comments.length;i++){%>
+	<%if(quiz.comments[i].publicado){%>
+		<p>- <%=quiz.comments[i].texto%></p>
+	<%} else if(session.user && (session.user.isAdmin || (session.user && quiz.autor.id === session.user.id))){%>
+			<p>- <%=quiz.comments[i].texto%>
+			<a href="/quizes/<%= quiz.id %>/comments/<%=i%>/publish"><button>Publicar</button></a></p>
+	<%}%>
+<%}%>
